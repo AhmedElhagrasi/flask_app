@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo "Building the Docker image"
                 sh "docker build -t galalshalaby/e-commerce:${env.BUILD_NUMBER} ."
-                withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                withCredentials([usernamePassword(credentialsId: 'docker-hup', passwordVariable: 'pass', usernameVariable: 'user')]) {
                     echo "Logging in to Docker Hub"
                     sh "echo $pass | docker login -u $user --password-stdin"
                     echo "Pushing the Docker image to Docker Hub"
