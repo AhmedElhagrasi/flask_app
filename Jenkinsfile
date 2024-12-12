@@ -6,7 +6,7 @@ pipeline{
         stage('build'){
             steps{
             sh "docker build -t maro4299311/flask:${env.BUILD_NUMBER} ."
-            withCredentials([usernamePassword(credentialsId: 'docker_hub', passwordVariable: 'pass', usernameVariable: 'user')]) {
+            withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'pass', usernameVariable: 'user')]) {
              sh "docker login -u $user  -p $pass"
              sh "docker push maro4299311/flask:${env.BUILD_NUMBER}"
                 //dasdasdsads
