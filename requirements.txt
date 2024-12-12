@@ -1,0 +1,3 @@
+Flask==2.3.2          # Flask framework
+gunicorn==20.1.0      # Production WSGI server for Flask
+requests==2.31.0      # For making HTTP requests (if used in the app)
