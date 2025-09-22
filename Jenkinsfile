@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('pull src code') {
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/marwansss/flask_dockerApp.git'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/m/flask_dockerApp.git'
             }
         }
         
