@@ -22,7 +22,7 @@ pipeline {
         
         stage('test'){
             steps{
-                echo "no test cases found"
+                echo "no test cases found .. . ."
             }
         }
         
