@@ -12,7 +12,8 @@ pipeline {
         stage('build docker image'){
             steps{
                 sh "docker build -t ahmedelhagrasi/flask_app:$BUILD_NUMBER ."
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                withCredentials([usernamePassword(credentialsId: '87046a01-a439-407f-bd4f-7e757f686f63', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                    
     sh "docker login -u $USER -p $PASS"
     sh "docker push ahmedelhagrasi/flask_app:$BUILD_NUMBER"
 }
