@@ -1,7 +1,6 @@
 pipeline {
-    agent{
-        label 'main'
-    }
+    agent
+    // {        label 'main'    }
     stages {
         stage('pull src code') {
             steps {
