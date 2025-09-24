@@ -1,5 +1,5 @@
 pipeline {
-    agent
+    agent any
     // {        label 'main'    }
     stages {
         stage('pull src code') {
