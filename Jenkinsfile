@@ -27,7 +27,7 @@ pipeline {
         
         stage('deploy'){
             steps{
-                sh "docker run -d -p 500$BUILD_NUMBER:8008 ahmedelhagrasi/flask_app:$BUILD_NUMBER"
+                sh "docker run -d -p 500$BUILD_NUMBER:8080 ahmedelhagrasi/flask_app:$BUILD_NUMBER"
             }
         }
     }
